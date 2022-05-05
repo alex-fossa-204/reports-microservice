@@ -10,7 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.List;
 
 @SpringBootTest
-public class ServiceTest {
+public class ReportServiceTest {
 
     @Autowired
     private ReportService reportService;
@@ -20,6 +20,19 @@ public class ServiceTest {
         List<ReportDto> reports = reportService.findUserReports(786486841L);
         Assertions.assertNotNull(reports);
         reports.forEach(System.out::println);
+    }
+
+    @Test
+    public void addReportTest() {
+        ReportDto reportDto = new ReportDto();
+        reportDto.setReportTitle("Test Report");
+        reportDto.setReportBody("Testing Report sgospfh");
+        reportDto.setReporterUid(786486841L);
+        reportDto.setTimeCost(6.0);
+        System.out.println("dto: " + reportDto);
+
+        ReportDto reportDtoSaved = reportService.addReport(reportDto);
+        System.out.println("dto saved: " + reportDtoSaved);
     }
 
 }
