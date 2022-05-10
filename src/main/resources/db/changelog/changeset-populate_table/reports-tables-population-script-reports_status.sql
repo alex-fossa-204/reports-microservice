@@ -1,6 +1,6 @@
 --liquibase formatted sql
 
---changeset Bakulin:reports_statuses_inserts splirtStatements:true endDelimeter:;
+--changeset Bakulin:reports_statuses_inserts splitStatements:true endDelimeter:;
 
-INSERT INTO report_status VALUES (1, 'STARTED');
-INSERT INTO report_status VALUES (2, 'FINISHED');
+INSERT INTO report_status OVERRIDING SYSTEM VALUE VALUES (1, 'STARTED');
+INSERT INTO report_status OVERRIDING SYSTEM VALUE VALUES (2, 'FINISHED');

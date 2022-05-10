@@ -4,7 +4,7 @@
 
 CREATE TABLE report
 (
-    id int PRIMARY KEY,
+    id int generated always as identity PRIMARY KEY,
     report_title VARCHAR(128),
     report_body VARCHAR(256),
     report_date timestamp,
@@ -17,6 +17,6 @@ CREATE TABLE report
 
 CREATE TABLE report_status
 (
-    id int PRIMARY KEY,
+    id int generated always as identity PRIMARY KEY,
     report_status_name VARCHAR(64)
 );

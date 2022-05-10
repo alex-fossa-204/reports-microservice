@@ -5,3 +5,5 @@ databaseChangeLog:
       file: db/changelog/changeset-populate_table/reports-tables-population-script-reports_status.sql
   - include:
       file: db/changelog/changeset-populate_table/reports-tables-population-script-reports.sql
+  - include:
+      file: db/changelog/changeset-constraints_table/reports-tables-constraints-script.sql
