@@ -16,6 +16,7 @@
 	<properties>
 		<java.version>11</java.version>
 		<swagger.version>3.0.0</swagger.version>
+		<liquibase.version>4.10.0</liquibase.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -46,6 +47,11 @@
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-boot-starter</artifactId>
 			<version>${swagger.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.liquibase</groupId>
+			<artifactId>liquibase-core</artifactId>
+			<version>${liquibase.version}</version>
 		</dependency>
 	</dependencies>
 
